@@ -31,7 +31,7 @@ class RithualGoodsListView(ListAPIView):
 
 class AboutListView(ListAPIView):
 	"""For display about page"""
-	queryset = About.objects.all()
+	queryset = About.objects.all().order_by("id")
 	serializer_class = ListAboutSerializer
 
 class ContactsListView(ListAPIView):
