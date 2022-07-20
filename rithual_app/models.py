@@ -77,9 +77,25 @@ class Contacts(models.Model):
 
 class MainPage(models.Model):
 	"""Content for main page"""
+
+	font_variant = (
+		("З", "Звичайний"),
+		("К", "Курсив"),
+		("Ж", "Жирний"),
+		("ЖК", "Жирний курсив"),
+		)
+
 	image = models.TextField()
 	display_on = models.BooleanField(default=False)
 	description_site = models.TextField(verbose_name="Опис", default="Сайт ритуальних послуг")
+	font = models.CharField(
+		max_length=20, 
+		choices=font_variant,
+		blank=True,
+		default="З",
+		verbose_name="Шрифт", 
+		help_text="курсив, жирний, звичайний, жирний курсив"
+		)
 	date = models.DateTimeField(auto_now_add=True)
 
 	class Meta:
