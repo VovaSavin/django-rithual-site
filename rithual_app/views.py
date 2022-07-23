@@ -46,6 +46,12 @@ class DetailServiceAPI(RetrieveAPIView):
 	queryset = RithualServices.objects.all()
 	serializer_class = ListRithualServicesSerializer
 
+class DetailGoodsAPI(RetrieveAPIView):
+	"""For one service"""
+
+	queryset = Ruthual_goods.objects.all()
+	serializer_class = ListRithualGoodsSerializer
+
 
 class MainPageListView(ListAPIView):
 	"""For display contacts"""
