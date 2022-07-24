@@ -19,6 +19,7 @@ class RithualServices(models.Model):
 		verbose_name = "Послуга"
 		verbose_name_plural ="Послуги"
 
+
 class Ruthual_goods(models.Model):
 	"""Table for rithual goods"""
 	name = models.CharField(max_length=100, verbose_name="Назва")
@@ -32,6 +33,7 @@ class Ruthual_goods(models.Model):
 	class Meta:
 		verbose_name = "Товар"
 		verbose_name_plural = "Товари"
+
 
 class About(models.Model):
 	"""Simple text for other description info"""
@@ -61,6 +63,7 @@ class About(models.Model):
 		verbose_name = "Загальне"
 		verbose_name_plural = "Загальні"
 
+
 class Contacts(models.Model):
 	"""Контакти"""
 	name = models.CharField(max_length=100, verbose_name="Ваше ім'я")
@@ -74,6 +77,7 @@ class Contacts(models.Model):
 	class Meta:
 		verbose_name = "Контакт"
 		verbose_name_plural = "Контакти"
+
 
 class MainPage(models.Model):
 	"""Content for main page"""
