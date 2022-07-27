@@ -54,6 +54,10 @@ class About(models.Model):
 		verbose_name="Шрифт", 
 		help_text="курсив, жирний, звичайний, жирний курсив"
 		)
+	picture = models.TextField(
+		verbose_name="Посилання на фото",
+		default="https://hafeleshop.com.ua/uploads/shop/products/main/02205340_0.jpg"
+		)
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
