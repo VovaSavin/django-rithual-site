@@ -92,7 +92,10 @@ class MainPage(models.Model):
 		("Ж", "Жирний"),
 		("ЖК", "Жирний курсив"),
 		)
-
+	header_image = models.TextField(
+		verbose_name="Зображення заголовка", 
+		default="https://service.muzychenko.dev/wp-content/uploads/2022/05/ritual1.webp"
+		)
 	image = models.TextField()
 	display_on = models.BooleanField(default=False)
 	description_site = models.TextField(verbose_name="Опис", default="Сайт ритуальних послуг")
