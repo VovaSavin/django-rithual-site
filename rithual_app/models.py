@@ -10,6 +10,7 @@ class RithualServices(models.Model):
 	name = models.CharField(max_length=100, verbose_name="Назва")
 	description = models.TextField(verbose_name="Опис")
 	picture = models.TextField(verbose_name="Посилання на фото")
+	price_of = models.CharField(verbose_name="Ціна від", max_length=50, blank=True, null=True)
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
@@ -25,6 +26,7 @@ class Ruthual_goods(models.Model):
 	name = models.CharField(max_length=100, verbose_name="Назва")
 	description = models.TextField(verbose_name="Опис")
 	picture = models.TextField(verbose_name="Посилання на фото")
+	price_of = models.CharField(verbose_name="Ціна від", max_length=50, blank=True, null=True)
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
@@ -73,6 +75,7 @@ class Contacts(models.Model):
 	name = models.CharField(max_length=100, verbose_name="Ваше ім'я")
 	phone = models.CharField(max_length=100, verbose_name="Телефон")
 	email = models.EmailField()
+	our_address = models.TextField(default="", blank=True, null=True)
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
@@ -93,9 +96,10 @@ class MainPage(models.Model):
 		("ЖК", "Жирний курсив"),
 		)
 	header_image = models.TextField(
-		verbose_name="Зображення заголовка", 
-		default="https://service.muzychenko.dev/wp-content/uploads/2022/05/ritual1.webp"
+		verbose_name="Список", 
+		default="Текст"
 		)
+	display_on_list = models.BooleanField(default=False, verbose_name="Показати або приховати Список")
 	image = models.TextField()
 	display_on = models.BooleanField(default=False)
 	description_site = models.TextField(verbose_name="Опис", default="Сайт ритуальних послуг")
@@ -113,3 +117,14 @@ class MainPage(models.Model):
 		verbose_name = "Головне фото"
 		verbose_name_plural ="Головні фото"
 
+
+class Headers(models.Model):
+	"""For header component"""
+
+	name = models.CharField(verbose_name="Назва", max_length=50)
+	image = models.TextField(verbose_name="Зображення шапки сайта")
+	date = models.DateTimeField(auto_now_add=True)
+
+	class Meta:
+		verbose_name = "Зображення шапки сайта"
+		verbose_name_plural ="Зображення шапки сайта"

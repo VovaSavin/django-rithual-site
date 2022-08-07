@@ -5,6 +5,7 @@ from .models import (
 	About, 
 	Contacts,
 	MainPage,
+	Headers,
 )
 
 class ListRithualServicesSerializer(serializers.ModelSerializer):
@@ -14,6 +15,12 @@ class ListRithualServicesSerializer(serializers.ModelSerializer):
 		model = RithualServices
 		fields = "__all__"
 		
+class HeadersServicesSerializer(serializers.ModelSerializer):
+	"""Serializer for headers"""
+
+	class Meta:
+		model = Headers
+		fields = "__all__"
 
 class ListRithualGoodsSerializer(serializers.ModelSerializer):
 	"""Serializer for services"""

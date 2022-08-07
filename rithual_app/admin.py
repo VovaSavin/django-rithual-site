@@ -4,10 +4,14 @@ from .models import (
 	Ruthual_goods, 
 	About, 
 	Contacts,
-	MainPage
+	MainPage,
+	Headers,
 )
 # Register your models here.
 
+@admin.register(Headers)
+class HeadersAdmin(admin.ModelAdmin):
+	list_display = ["name", "date",]
 
 @admin.register(RithualServices)
 class RithualServicesAdmin(admin.ModelAdmin):

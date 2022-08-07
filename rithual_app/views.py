@@ -9,15 +9,23 @@ from .serializers import (
 	ListAboutSerializer,
 	ListContactsSerializer,
 	MainPageSerializer,
+	HeadersServicesSerializer,
 )
 from .models import (
 	RithualServices, 
 	Ruthual_goods, 
 	About, 
 	Contacts,
-	MainPage
+	MainPage,
+	Headers,
 )
 # Create your views here.
+
+class HeadersListView(ListAPIView):
+	"""For display headers info"""
+
+	queryset = Headers.objects.all()
+	serializer_class = HeadersServicesSerializer
 
 class RithualServicesListView(ListAPIView):
 	"""For display rithual services"""
