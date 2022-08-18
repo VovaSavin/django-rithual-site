@@ -75,7 +75,7 @@ class Contacts(models.Model):
 	name = models.CharField(max_length=100, verbose_name="Ваше ім'я")
 	phone = models.CharField(max_length=100, verbose_name="Телефон")
 	email = models.EmailField()
-	our_address = models.TextField(default="", blank=True, null=True)
+	our_address = models.TextField(default="", blank=True, null=True, verbose_name="Ваша адреса")
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
