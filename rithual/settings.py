@@ -120,7 +120,7 @@ CORS_ORIGIN_WHITELIST = [
     "http://127.0.0.1:8080",
     "http://127.0.0.1:8000",
     "http://178.20.159.103:8080",
-    "http://west-ritual.xyz:8080",
+    "http://west-ritual.xyz",
 ]
 
 # Internationalization
