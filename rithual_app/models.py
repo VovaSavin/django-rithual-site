@@ -128,3 +128,14 @@ class Headers(models.Model):
 	class Meta:
 		verbose_name = "Зображення шапки сайта"
 		verbose_name_plural ="Зображення шапки сайта"
+
+
+class MailMessage(models.Model):
+	"""Mails and messages from users"""
+	mails = models.EmailField(verbose_name="Пошта", max_length=255)
+	text = models.TextField(verbose_name="Текст")
+	date = models.DateTimeField(auto_now_add=True)
+
+	class Meta:
+		verbose_name = "Лист"
+		verbose_name_plural ="Листи"

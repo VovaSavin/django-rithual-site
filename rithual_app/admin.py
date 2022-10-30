@@ -6,8 +6,13 @@ from .models import (
 	Contacts,
 	MainPage,
 	Headers,
+MailMessage,
 )
 # Register your models here.
+
+@admin.register(MailMessage)
+class MailMessageAdmin(admin.ModelAdmin):
+	list_display = ["mails", "text", "date",]
 
 @admin.register(Headers)
 class HeadersAdmin(admin.ModelAdmin):

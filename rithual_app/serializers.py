@@ -6,7 +6,16 @@ from .models import (
 	Contacts,
 	MainPage,
 	Headers,
+	MailMessage,
 )
+
+class MailMessageSerializer(serializers.ModelSerializer):
+	"""Serializer for services"""
+
+	class Meta:
+		model = MailMessage
+		fields = "__all__"
+		
 
 class ListRithualServicesSerializer(serializers.ModelSerializer):
 	"""Serializer for services"""

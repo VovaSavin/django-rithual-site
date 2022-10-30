@@ -11,4 +11,5 @@ urlpatterns = [
     path("contacts/", views.ContactsListView.as_view(), name="contacts"),
     path("main_img/", views.MainPageListView.as_view(), name="img_main"),
     path("headers/", views.HeadersListView.as_view(), name="head"),
+    path("send_mail/", views.ShowMail.as_view(), name="mail_send"),
 ]
