@@ -96,7 +96,7 @@ class ShowMail(ListCreateAPIView):
             request.data["mails"],
             request.data["text"],
             request.data["mails"],
-            ["volodimirsavin56@gmail.com", ],
+            ["ritual.pohrebyshche@gmail.com", ],
         )
         return Response(status=201)
 
